@@ -7,11 +7,11 @@ from tqdm import trange, notebook
 num = 0
 intPage = 1
 
-f = open(r'output.csv', 'w', newline='')
-w = csv.writer(f)
-w.writerow(['song_num', 'song_title', 'song_singer', 'song_lyricist', 'song_writer'])  # 헤더
+
 
 for num in notebook.tqdm(range(10)):
+    f = open(r'tj-%d.csv' % (num), 'w', newline='')
+    w = csv.writer(f)
     while True:
         url = 'http://www.tjmedia.co.kr/tjsong/song_search_list.asp?strType=16&strText=%d&strCond=0&searchOrderItem' \
               '=&searchOrderType=&strSize05=100&intPage=%d' % (
