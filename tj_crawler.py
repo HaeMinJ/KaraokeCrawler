@@ -42,7 +42,7 @@ for num in notebook.tqdm(range(10)):
 
                 w.writerow(d)
 
-            intPage += 1pip install tqdm
+            intPage += 1
             print(intPage)
         else:
             print(response.status_code)
